@@ -3,8 +3,8 @@
 
 .preview {
   margin: 30px 40px;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
   @include flex(center, center, wrap);
   flex-direction: column;
   background-size: cover;
@@ -21,7 +21,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   @media (max-width: 499px) {
@@ -31,6 +31,7 @@
   }
 
   .title {
+    margin-bottom: 5px;
     color: $bgColor;
     position: relative;
     z-index: 1;
@@ -41,18 +42,27 @@
   }
 
   .text {
+    background-color: red;
+    border-radius: 10px;
     color: $bgColor;
     position: relative;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
     z-index: 1;
+    display: inline;
     @include font(1rem, center);
   }
 
   .linkContainer {
     display: flex;
     gap: 15px;
+    margin-top: 40px;
+    justify-content: center;
   }
 
   .link {
+    border: 1px solid red;
     padding: 5px 15px;
     background-color: $titleColor;
     color: $bgColor;

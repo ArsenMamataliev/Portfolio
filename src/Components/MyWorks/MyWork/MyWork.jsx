@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 
 import style from './MyWork.module.scss';
@@ -7,13 +8,14 @@ export const MyWork = (props) => {
     return (
         <Fade top>
             <div className={style.preview} style={props.style}>
-                <div>
-                    <h3 className={style.title}>{props.title}</h3>
-                </div> 
+                <img src={props.imgLink} alt="Photo" />
                 <div className={style.description}>
-                    {props.text.map((stack)=>
-                        <p className={style.text}>{stack}</p>
-                    )}
+                    <h3 className={style.title}>{props.title}</h3>
+                    <div className={style.stack}>
+                        {props.text.map((stack)=>
+                            <p className={style.text}>{stack}</p>
+                        )}
+                    </div>
                     <div className={style.linkContainer}>
                         <div>
                             <a href={props.codeLink} className={style.link}>Code</a>

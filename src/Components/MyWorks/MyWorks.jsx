@@ -12,64 +12,46 @@ import crypappy from './../../Assets/img/crypappy.png';
 import consctractor from './../../Assets/img/constractor-x.png';
 
 export const MyWorks = () => {
-    const onlinePlatformStyle = {
-        backgroundImage: `url(${onlinePlatform})`
-    };
-    const todoListStyle = {
-        backgroundImage: `url(${todoList})`
-    };
-    const brainTrainStyle = {
-        backgroundImage: `url(${brainTrain})`
-    };
-    const tinyTrelloStyle = {
-        backgroundImage: `url(${tinyTrello})`
-    };
-    const crypappyStyle = {
-        backgroundImage: `url(${crypappy})`
-    };
-    const consctractorStyle = {
-        backgroundImage: `url(${consctractor})`
-    };
     const networksData=[
         { 
             title: 'Online course selling platform', 
-            style: onlinePlatformStyle,
-            text: ['React', 'ReactHooks', 'MaterialUi', 'CSS'],
+            text: ['React', 'ReactHooks', 'MaterialUI', 'CSS'],
+            imgLink: onlinePlatform,
             codeLink: 'https://github.com/ArsenMamataliev/Online-course-selling-platform',
             demoLink: 'https://ama-zone.netlify.app/'
         }, 
         {
             title: 'Todo list',
-            style: todoListStyle,
             text: ['React', 'ReactHooks', 'CSS'],
+            imgLink: todoList,
             codeLink: 'https://github.com/ArsenMamataliev/Movie-todo-app',
             demoLink: 'https://arsenmamataliev.github.io/Movie-todo-app/'
         },
         {
             title: 'Game brain train', 
-            style: brainTrainStyle,
             text: ['HTML', 'CSS', 'JS'],
+            imgLink: brainTrain,
             codeLink:'https://github.com/ArsenMamataliev/Smart',
             demoLink: 'https://arsenmamataliev.github.io/Smart/'
         },
         {
             title: 'Tiny trello',
             text:  ['React', 'Redux', 'MaterialUI', 'CSS'],
-            style: tinyTrelloStyle,
+            imgLink: tinyTrello,
             codeLink: 'https://github.com/ArsenMamataliev/tiny_trello',
             demoLink: 'https://tiny-trello.netlify.app'
         },
         {
             title: 'CrypAppy', 
-            style: crypappyStyle,
             text: ['HTML', 'CSS', 'JS'],
+            imgLink: crypappy,
             codeLink: 'https://github.com/ArsenMamataliev/crypappy',
             demoLink: 'https://crypappysite.netlify.app/'
         },
         {
             title: 'Constractor X',
             text:  ['HTML', 'SCSS', 'JS'],
-            style: consctractorStyle,
+            imgLink: consctractor,
             codeLink: 'https://github.com/ArsenMamataliev/ConstractorX',
             demoLink: 'https://constractor-x.netlify.app/'
         }
@@ -81,13 +63,14 @@ export const MyWorks = () => {
                 <div className={style.worksContainer}>
                     <Title title={'My projects'}/>
                     <div className={style.links}>
-                        {networksData.map(data=> <MyWork title={data.title}
-                            style={data.style}
+                        {networksData.map(data=>
+                         <MyWork title={data.title}
+                            imgLink={data.imgLink}
                             text={data.text}
                             codeLink={data.codeLink}
-                            demoLink={data.demoLink}/>
-                            )
-                            }
+                            demoLink={data.demoLink}
+                        />
+                        )}
                     </div>
                 </div>
             </div>

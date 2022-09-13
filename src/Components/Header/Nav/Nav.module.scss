@@ -22,7 +22,7 @@
     cursor: pointer;
 
     .link {
-      color: #93d9ea;
+      color: $navbarTextColor;
       opacity: 1;
       @include font(1.5rem, center);
     }

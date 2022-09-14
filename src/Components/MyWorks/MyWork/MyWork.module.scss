@@ -18,8 +18,13 @@
     height: 400px;
   }
 
-  @media (max-width: 360px) {
-    max-width: 270px;
+  @media (max-width: 414px) {
+    max-width: 300px;
+    height: 400px;
+  }
+
+  @media (max-width: 380px) {
+    max-width: 280px;
     height: 400px;
   }
 

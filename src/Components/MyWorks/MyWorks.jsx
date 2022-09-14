@@ -15,7 +15,7 @@ export const MyWorks = () => {
     const networksData=[
         { 
             title: 'Online course selling platform', 
-            text: ['React', 'ReactHooks', 'MaterialUI', 'CSS'],
+            text: ['React', 'Redux', 'MaterialUI', 'CSS'],
             imgLink: onlinePlatform,
             codeLink: 'https://github.com/ArsenMamataliev/Online-course-selling-platform',
             demoLink: 'https://ama-zone.netlify.app/'

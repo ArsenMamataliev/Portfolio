@@ -9,7 +9,7 @@ import {linksDataItems} from './../../Constants/constants';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
-import { Fade } from "react-awesome-reveal";
+import Fade from 'react-awesome-reveal';
 
 export const AboutMe = () => {
  const contactsDataItems = [
@@ -26,16 +26,17 @@ export const AboutMe = () => {
             <div className={style.wrapper}>
                 <Fade left>
                     <div className={style.containerPhoto}>
-                        <img src={ava} className={style.myPhoto} alt={'photo'}/>
+                        <img src={ava} className={style.myPhoto} alt={'avatar'}/>
                     </div>
                 </Fade>
                 <Fade right>
                     <div className={style.containerContact}>
-                        {contactsDataItems.map(item=> 
-                            <a href={''} className={style.link}>
+                        {contactsDataItems.map(item=>
+                            <p className={style.text}>
                                 <FontAwesomeIcon className={style.contactIcon} icon={item.icon}/> 
                                 {item.data}
-                            </a>)}
+                            </p>
+                        )}
                     </div>
                 </Fade>
             </div>
@@ -47,12 +48,16 @@ export const AboutMe = () => {
                         </a>
                     )}
                 </div>
-                <div className={style.text}><p>I have experience with creating SPA using React, Redux, TypeScript, HTML,
-                    CSS.
-                    I am currently focused on improving my skills by using new technologies and tools.
-                    My hobbies are solving puzzles on Codewars, reading books about coding, and watching
-                    educational videos. I keep polishing up my English by using apps, reading articles and
-                    watching TV shows and series. I really enjoy learning something new.</p></div>
+                <div className={style.text}>
+                    <p>
+                        I have experience with creating SPA using React, Redux, TypeScript, HTML,
+                        CSS.
+                        I am currently focused on improving my skills by using new technologies and tools.
+                        My hobbies are solving puzzles on Codewars, reading books about coding, and watching
+                        educational videos. I keep polishing up my English by using apps, reading articles and
+                        watching TV shows and series. I really enjoy learning something new.
+                    </p>
+                </div>
             </Fade>
         </div>
     )

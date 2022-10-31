@@ -33,8 +33,8 @@ export const AboutMe = () => {
                     <div className={style.containerContact}>
                         {contactsDataItems.map(item=> 
                             <a href={''} className={style.link}>
-                                <FontAwesomeIcon icon={item.icon}/>
-                                 {item.data}
+                                <FontAwesomeIcon className={style.contactIcon} icon={item.icon}/> 
+                                {item.data}
                             </a>)}
                     </div>
                 </Fade>
